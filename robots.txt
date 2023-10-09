@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://https://khatexpertgroup.netlify.app/.xml
+google-site-verification=WAnjUCd8untytWn0ZhRogqJ4-HF-7n7roi77pECJND4
