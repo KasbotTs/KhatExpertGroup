@@ -1,0 +1,473 @@
+/* Обнуление отступов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Общие стили для всей страницы */
+body {
+  font-family: "Georgia", serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #6b3737;
+}
+
+/* Стили для шапки */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+header img {
+  height: 120px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #800000;
+  letter-spacing: 0.5px;
+}
+
+/* Стили для основного контента */
+main {
+  padding: 10px;
+}
+
+#banner {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#banner button {
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #eee;
+  color: #6b3737;
+  border-radius: 15px;
+}
+
+/* Стили для сетки услуг */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Стили для карточек услуг */
+.service-card {
+  perspective: 1000px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+  max-width: 45%;
+  height: auto;
+  margin: 0 auto 3px auto;
+  display: block;
+}
+
+/* Внутренние стили карточки */
+.service-card-inner {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-front h3,
+.card-back h3,
+.card-front p,
+.card-back p {
+  font-family: "sans-serif", sans-serif;
+  font-size: 14px;
+  margin-bottom: 1px;
+}
+
+/* Стили для кнопки в карточке */
+.service-card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #800000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-card button:hover {
+  background-color: #6b3737;
+}
+footer {
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  padding: 10px;
+  transition: border-color 0.5s ease;
+  font-size: 14px; /* Установлен размер шрифта */
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+  margin: 2px 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 2px 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+footer:hover {
+  border-color: #333333; /* цвет рамки при наведении */
+}
+/* Эффекты при наведении */
+button:hover,
+a:hover {
+  background-color: #736c6c;
+  color: #5a0000;
+  text-decoration: underline;
+}
+
+/* Media Query для мобильных устройств */
+@media only screen and (max-width: 600px) {
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+/* Медиа запросы для различных размеров экрана */
+@media (max-width: 1200px) {
+  .modal-content {
+    width: 70%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .modal-content {
+    width: 50%;
+    max-width: 300px;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #aaa;
+}
+
+.close:hover {
+  color: #333;
+}
+
+/* Стили для полей формы и кнопок */
+.modal-content input[type="text"],
+.modal-content input[type="tel"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #45a049;
+}
+
+/* Скрыть прокрутку страницы, когда модальное окно открыто */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Если нужно, добавьте стили для изображения */
+.modal-content img {
+  width: 10px; /* или любой другой размер */
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #aaa;
+}
+
+.close:hover {
+  color: black;
+}
+.footer-section.image {
+  text-align: center; /* Центрирует изображение в блоке */
+}
+.footer-section.image img {
+  max-width: 100px; /* Ограничивает максимальную ширину изображения */
+  height: auto; /* Сохраняет пропорции изображения */
+  margin: 0 auto; /* Добавляет автоматические отступы слева и справа от изображения для центрирования */
+  display: block; /* Делает изображение блочным элементом для корректного центрирования */
+}
+/* Фоновый слой модального окна */
+.modal {
+  display: none; /* По умолчанию скрыто */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон */
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+.modal-content {
+  background-color: #f4f4f4; /* Цвет фона окна */
+  margin: 5% auto; /* Вертикальное центрирование окна и автоматические боковые отступы */
+  padding: 8px; /* Внутренние отступы окна */
+  border: 1px solid #888; /* Граница вокруг окна, 1px толщиной, цвета #888 */
+  width: 100%; /* Ширина окна равна 80% родительского элемента */
+  max-width: 380px; /* Максимальная ширина окна – 500px */
+  max-height: 440px; /* Максимальная высота окна – 300px */
+  height: 100%; /* Высота окна – 100% родительского элемента (может создать проблему с прокруткой) */
+  border-radius: 10px; /* Скругленные углы у окна с радиусом 10px */
+  position: relative; /* Позиционирование относительно родительского элемента */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Тени под окном для эффекта "плавающего" элемента */
+}
+
+/* Пример дополнительных стилей и комментариев */
+
+/* Заголовок внутри модального окна */
+.modal-content h1 {
+  font-size: 40px; /* Размер шрифта заголовка */
+  margin-bottom: 80px; /* Отступ снизу, чтобы добавить пространство между заголовком и содержимым */
+}
+
+/* Абзац текста внутри модального окна */
+.modal-content p {
+  font-size: 16px; /* Размер шрифта параграфа */
+  line-height: 3; /* Межстрочный интервал для улучшения читаемости */
+}
+
+/* Стили для изображения внутри модального окна */
+.modal-content img {
+  max-width: 50%; /* Чтобы изображение было масштабируемым и не выходило за пределы контейнера */
+  max-height: 200px; /* Максимальная высота изображения */
+  display: block; /* Чтобы изображение отображалось блоком */
+  margin: auto; /* Чтобы изображение центровалось */
+}
+
+/* Кнопка закрытия внутри модального окна */
+.close-button {
+  background-color: #555; /* Цвет фона кнопки */
+  color: #fff; /* Цвет текста на кнопке */
+  padding: 1px 2px; /* Внутренние отступы для кнопки */
+  border: none; /* Убираем стандартные границы */
+  border-radius: 5px; /* Скругляем углы кнопки */
+  cursor: pointer; /* Стиль курсора при наведении - "рука" */
+  position: absolute; /* Абсолютное позиционирование внутри .modal-content */
+  top: 5px; /* Отступ сверху */
+  right: 5px; /* Отступ справа */
+}
+
+/* Стили полей ввода в модальном окне */
+.modal-content input[type="text"],
+.modal-content input[type="tel"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+/* Анимация открытия/закрытия модального окна */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Затемненный фон вокруг модального окна */
+.modal-backdrop {
+  display: none; /* по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
+/* Стиль кнопки в модальном окне */
+.modal-content button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #45a049;
+}
+/* Основные стили для раздела */
+section#about-us {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #555;
+  background-color: #f8f8f8;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Заголовок раздела */
+section#about-us h2 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Параграфы с основным текстом */
+section#about-us p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Список с выделенными словами */
+section#about-us ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+section#about-us ul li {
+  background-color: #eee;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+section#about-us ul li strong {
+  display: block;
+  font-size: 18px;
+  color: #333;
+}

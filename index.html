@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="бухгалтерия, аутсорсинг, налоговая отчетность"
+    />
+    <meta
+      name="description"
+      content="Предоставляем бухгалтерские услуги высокого качества."
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon" />
+
+    <script src="scripts.js" defer></script>
+    <title>KhatExpertGroup</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="Money Bundle Logo.png" alt="Логотип компании" />
+      </div>
+      <nav>
+        <!-- Убран атрибут target="_blank" -->
+        <a href="about.html">О нас</a>
+        <a href="#services" onclick="scrollToSection('services')">Услуги</a>
+        <a
+          href="#"
+          data-modal="contactModal"
+          onclick="openModal('contactModal')"
+          >Контакты</a
+        >
+      </nav>
+
+      <!-- Модальное окно контактов -->
+      <div id="contactModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('contactModal')"
+            >&times;</span
+          >
+
+          <h2>Информация о компании</h2>
+          <p>Название компании: Khatukaeva Expert Group.</p>
+          <p>Адрес: г. Москва, ул. Пушкина, д. 10</p>
+          <p>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+          <p>Email: <a href="mailto:info@xyz.com">info@xyz.com</a></p>
+        </div>
+      </div>
+    </header>
+    <main id="home">
+      <section id="banner">
+        <h1>Профессиональные Бухгалтерские Услуги</h1>
+        <p>Точность, надежность и своевременность.</p>
+      </section>
+      <div class="services-grid" id="services">
+        <div class="service-card">
+          <div class="service-card-inner" onclick="toggleCard(this)">
+            <div class="card-front">
+              <img
+                src="1 бух.png"
+                alt="Ведение бухгалтерии ИП"
+                loading="lazy"
+              />
+              <h3>Ведение бухгалтерии ИП</h3>
+              <p>
+                Ведение налогового учета, оформление документации, сдача
+                отчетности, расчет налогов, начисление зарплаты и многое другое.
+              </p>
+            </div>
+            <div class="card-back">
+              <!-- Информация для обратной стороны карточки -->
+              <h3>---</h3>
+              <p>
+                Это услуга включает в себя полное ведение бухгалтерии для
+                индивидуальных предпринимателей. Наша компания обеспечит
+                своевременное и профессиональное ведение вашей бухгалтерии, что
+                позволит вам сосредоточиться на развитии вашего бизнеса.
+              </p>
+              <!-- Кнопка для открытия модального окна -->
+              <button class="order-call-button">Заказать звонок</button>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-inner" onclick="toggleCard(this)">
+            <div class="card-front">
+              <img
+                src="5 бух.png"
+                alt="Ведение бухгалтерии ООО"
+                loading="lazy"
+              />
+              <h3>Ведение бухгалтерии ООО</h3>
+              <p>
+                Всё чаще передается на аутсорсинг, это позволяет избежать
+                некомпетентности сотрудников, создание и поддержка системы
+                учета. А также юридическая помощь.
+              </p>
+            </div>
+            <div class="card-back">
+              <!-- Информация для обратной стороны карточки -->
+              <h3>---</h3>
+              <p>
+                Это услуга включает в себя полное ведение бухгалтерии для
+                обществ с ограниченной ответственностью. Наша компания обеспечит
+                своевременное и профессиональное ведение вашей бухгалтерии, что
+                позволит вам сосредоточиться на развитии вашего бизнеса.
+              </p>
+              <!-- Кнопка для открытия модального окна -->
+              <button class="order-call-button">Заказать звонок</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-inner" onclick="toggleCard(this)">
+            <div class="card-front">
+              <img src="4 бух.png" alt="Сдача отчетности" loading="lazy" />
+              <h3>Сдача отчетности</h3>
+              <p>
+                Во все контролирующие органы: ФНС, ПФР, ФСС, Росстат и многие
+                другие.
+              </p>
+            </div>
+            <div class="card-back">
+              <!-- Информация для обратной стороны карточки -->
+              <h3>---</h3>
+              <p>
+                Наша компания обеспечивает быструю и точную сдачу отчетности во
+                все регулирующие органы. С нашей помощью ваш бизнес всегда будет
+                в соответствии с законодательством, а вы сможете сосредоточиться
+                на его развитии. Позвольте нам заботиться о вашей отчетности!
+              </p>
+              <!-- Кнопка для открытия модального окна -->
+              <button class="order-call-button">Заказать звонок</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="2 бух.png" alt="Нулевая отчетность" loading="lazy" />
+          <h3>Нулевая отчетность</h3>
+          <p>
+            Для компаний и индивидуальных предпринимателей с любым режимом
+            налогообложения.
+          </p>
+        </div>
+        <div class="service-card">
+          <img src="6 бух.png" alt="Восстановление учета" loading="lazy" />
+          <h3>Восстановление учета</h3>
+          <p>
+            Для юридических лиц и индивидуальных предпринимателей за любой
+            период.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-inner" onclick="toggleCard(this)">
+            <div class="card-front">
+              <img
+                src="7 бух.png"
+                alt="Налоговое планирование"
+                loading="lazy"
+              />
+              <h3>Налоговое планирование</h3>
+              <p>
+                Включает в себя: налоговый учет, выбор учетной политики, возврат
+                налогов и рассчет налоговой нагрузки.
+              </p>
+            </div>
+            <div class="card-back">
+              <!-- Информация для обратной стороны карточки -->
+              <h3>---</h3>
+              <p>
+                Налоговое планирование - ключевой элемент финансовой стратегии
+                вашей компании. Мы поможем вам максимизировать сбережения,
+                оптимизировать налоги и минимизировать риски, связанные с
+                налоговыми обязательствами.
+              </p>
+              <!-- Кнопка для открытия модального окна -->
+              <button class="order-call-button">Заказать звонок</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-inner" onclick="toggleCard(this)">
+            <div class="card-front">
+              <img src="8 бух.png" alt="Регистрация ИП и ООО" loading="lazy" />
+              <h3>Регистрация ИП и ООО</h3>
+              <p>Подготовим необходимый набор документов и заявлений.</p>
+            </div>
+            <div class="card-back">
+              <!-- Информация для обратной стороны карточки -->
+              <h3>---</h3>
+              <p>
+                Мы полностью обеспечим процесс регистрации вашего ИП или ООО,
+                предоставив всю необходимую консультацию и поддержку на каждом
+                этапе. Экономьте своё время и ресурсы, доверив этот процесс
+                профессионалам.
+              </p>
+              <!-- Кнопка для открытия модального окна -->
+              <button class="order-call-button">Заказать звонок</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-inner" onclick="toggleCard(this)">
+            <div class="card-front">
+              <img src="3 бух.png" alt="Дополнительные услуги" loading="lazy" />
+              <h3>Дополнительные услуги</h3>
+              <ul>
+                <li>Оформление первичной документации</li>
+                <li>Внедрение управленческого учета</li>
+                <li>Инвентаризация и ревизия</li>
+                <li>Создание финансовой службы</li>
+              </ul>
+            </div>
+            <div class="card-back">
+              <!-- Информация для обратной стороны карточки -->
+              <h3>---</h3>
+              <p>
+                Наша компания предоставляет полный спектр дополнительных услуг,
+                которые помогут вам максимально эффективно организовать
+                бухгалтерию вашей компании и оптимизировать финансовые процессы.
+              </p>
+              <!-- Кнопка для открытия модального окна -->
+              <button
+                class="order-call-button"
+                onclick="openModal('callModal')"
+              >
+                Заказать звонок
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Модальное окно 2 -->
+    <div id="callModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('callModal')">&times;</span>
+        <h2>Заказать звонок</h2>
+        <img
+          src="кол центр.png"
+          alt="Описание"
+          style="width: 100%; height: auto; margin-bottom: 20px"
+        />
+        <form id="callOrderForm">
+          <label for="name">Ваше имя:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="phone">Ваш телефон:</label>
+          <input type="tel" id="phone" name="phone" required />
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section contact-info">
+          <h4>Контактная Информация:</h4>
+          <p>Телефон: <a href="tel:+78001234567">8 800 123 45 67</a></p>
+          <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+          <p>Адрес: г. Москва, ул. Пушкина, д. 10</p>
+        </div>
+
+        <div class="footer-section image">
+          <img src="рука.png" alt="Описание изображения" />
+        </div>
+
+        <div class="footer-section services">
+          <h4>Наши Услуги:</h4>
+          <ul>
+            <li><a href="/audit">Аудит</a></li>
+            <li>
+              <a href="/tax-planning">Налоговое планирование и консультации</a>
+            </li>
+            <li><a href="/accounting">Ведение бухгалтерского учета</a></li>
+            <li>
+              <a href="/financial-reports"
+                >Услуги по составлению финансовой отчетности</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
